@@ -1,12 +1,12 @@
-# Name: 
-# KUID: 
-# LAB Session (Day/Time): 
-# LAB Assignment: 
+# Name: Zoey Spies
+# KUID: 3136594
+# LAB Session (Day/Time): Monday 11 AM
+# LAB Assignment: Lab 5
 # Description:
 #
 #
 #
-# Collaborators/Sources:
+# Collaborators/Sources: 268 notes, geeksforgeeks, stackoverflow
 import re
 
 def get_input_list(prompt="Enter numbers (use spaces and/or commas): ") -> list[int]:
