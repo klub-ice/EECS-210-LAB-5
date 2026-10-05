@@ -41,17 +41,20 @@ def merge(L1: list[int], L2: list[int]) -> list[int]:  # Merges two sorted lists
 
     return merged_list  # Return the merged list
 
+def merge_sort(L: list[int]) -> list[int]:  # Sorts a list using the merge sort algorithm
+    if len(L) <= 1:  # Base case: a list of length 0 or 1 is already sorted
+        return L
+
+    mid = len(L) // 2  # Find the midpoint of the list
+    left_half = merge_sort(L[:mid])  # Recursively sort the left half
+    right_half = merge_sort(L[mid:])  # Recursively sort the right half
+
+    return merge(left_half, right_half)  # Merge the sorted halves
 
 # Example usage
 def main():
-    L1 = get_input_list()
-    print(f"Got: {L1}")
-
-    L2 = get_input_list()
-    print(f"Got: {L2}")
-
-    merged = merge(L1, L2)
-    print(f"Merged: {merged}")
-
+    numbers = get_input_list()  # Get the list of numbers from the user
+    sorted_numbers = merge_sort(numbers)  # Sort the list using merge sort
+    print("Sorted numbers:", sorted_numbers)  # Print the sorted list
 
 main()
